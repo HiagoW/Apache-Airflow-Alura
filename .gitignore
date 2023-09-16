@@ -1,8 +1,5 @@
 # Docker
-config/
-dags/
 logs/
-plugins/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
