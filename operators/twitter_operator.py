@@ -1,5 +1,5 @@
 import sys
-sys.path.append("airflow_pipeline")
+sys.path.append("/opt/airflow")
 
 from datetime import datetime, timedelta
 import json
@@ -10,12 +10,14 @@ from airflow.models import BaseOperator, TaskInstance, DAG
 
 class TwitterOperator(BaseOperator):
 
+    template_fields = ["query", "file_path", "start_time", "end_time"]
+
     def __init__(self, file_path, end_time, start_time, query, **kwargs):
         self.file_path = file_path
         self.end_time = end_time
         self.start_time = start_time
         self.query = query
-        super().__init(**kwargs)
+        super().__init__(**kwargs)
 
     def create_parent_folder(self):
         (Path(self.file_path).parent).mkdir(parents=True, exist_ok=True)

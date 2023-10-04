@@ -1,3 +1,9 @@
+datalake/
+airflow-webserver.pid
+airflow-worker.pid
+airflow.cfg
+webserver_config.py
+
 # Docker
 logs/
 

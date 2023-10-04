@@ -9,7 +9,7 @@ class TwitterHook(HttpHook):
         self.end_time = end_time
         self.start_time = start_time
         self.query = query
-        self.conn_id = conn_id or "twitter-default"
+        self.conn_id = conn_id or "twitter_default"
         super().__init__(http_conn_id=self.conn_id)
     
     def create_url(self):
@@ -49,6 +49,7 @@ class TwitterHook(HttpHook):
         session = self.get_conn()
         url_raw = self.create_url()
 
+        print(f"Querying: {url_raw}")
         return self.paginate(url_raw, session)
     
 if __name__ == "__main__":
