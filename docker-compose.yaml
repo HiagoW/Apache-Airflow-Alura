@@ -250,6 +250,7 @@ services:
         mkdir -p /sources/logs /sources/dags /sources/plugins
         chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins}
         exec /entrypoint airflow version
+        pip install pyspark==3.3.1
     # yamllint enable rule:line-length
     environment:
       <<: *airflow-common-env
