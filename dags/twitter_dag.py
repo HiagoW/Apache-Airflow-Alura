@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/opt/airflow")
+sys.path.append("/mnt/c/Users/Pichau/Desktop/airflow-alura")
 
 from operators.twitter_operator import TwitterOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator;

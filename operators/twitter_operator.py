@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/opt/airflow")
+sys.path.append("/mnt/c/Users/Pichau/Desktop/airflow-alura")
 
 from datetime import datetime, timedelta
 import json
