@@ -11,3 +11,11 @@ winpty docker exec -it airflow-alura-airflow-worker-1 bash
 ```shell
 docker cp airflow-alura-airflow-worker-1:/opt/airflow/semana=2023-09-18 .
 ```
+
+# Airflow Standalone
+```shell
+source airflow-venv/bin/activate
+export AIRFLOW_HOME=$(pwd)
+export SPARK_HOME=/root/spark-3.1.3-bin-hadoop3.2
+airflow standalone
+```
