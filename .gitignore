@@ -1,5 +1,6 @@
 datalake/
 dados_transformation/
+stocks/
 
 # Docker
 logs/
