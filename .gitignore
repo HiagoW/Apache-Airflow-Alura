@@ -1,6 +1,9 @@
 datalake/
 dados_transformation/
 stocks/
+crypto/
+airflow.db
+airflow-webserver.pid
 
 # Docker
 logs/

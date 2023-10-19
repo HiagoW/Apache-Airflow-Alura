@@ -30,6 +30,6 @@ def get_history(ticker,ds=None,ds_nodash=None):
 )
 def get_stocks_dag():
     for ticker in TICKERS:
-        get_history.override(task_id=ticker)(ticker)
+        get_history.override(task_id=ticker, pool="small_pool")(ticker)
 
 dag = get_stocks_dag()
