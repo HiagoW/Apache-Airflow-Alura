@@ -17,5 +17,4 @@ docker build -t airflow-alura .
 helm upgrade --install airflow apache-airflow/airflow --namespace airflow -f override-values.yml
 minikube kubectl -- port-forward svc/airflow-webserver 8080:8080 --namespace airflow
 ```
-
-* 
+ 
